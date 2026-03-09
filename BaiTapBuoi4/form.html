@@ -7,7 +7,7 @@
 </head>
 <body>
 <form action="https://api-gateway.f8.edu.vn/action_page.php" method="post" enctype="multipart/form-data">
-                                        <!--Nhóm1-->
+    <!--Nhóm1-->
     <fieldset>
         <legend>Nhóm 1 - Thông tin cơ bản</legend>
         <label for="fullname">Họ tên</label>
@@ -20,7 +20,7 @@
         <input type="password" id="password" name="password" required minlength="6" autocomplete="off" tabindex="3">
         <br>
         <label for="confirm-password">Nhập lại mật khẩu</label>
-        <input type="password" id="confirm-password" name="confirm-password" required autocomplete="off" tabindex="4">
+        <input type="password" id="confirm-password" name="confirm_password" required autocomplete="off" tabindex="4">
         <br>
         <label for="phone">Số điện thoại:</label>
         <input id="phone" type="tel" name="phone" required placeholder="0xxxxxxxxx" pattern="0[0-9]{9}" tabindex="5">
@@ -37,10 +37,10 @@
         <label for="address">Địa chỉ</label>
         <input type="text" id="address" name="address" placeholder="Số nhà, đường, phường/xã" tabindex="9">
         <br>
-        <label for="zipcode"></label>
-        <input type="text" id="zipcode" name="zipcode" placeholder="700000" tabindex="10">
+        <label for="zipcode">Mã bưu chính</label>
+        <input type="text" id="zipcode" name="zipcode" placeholder="700000" maxlength="6" tabindex="10">
     </fieldset>
-                                        <!--Nhóm 2-->
+    <!--Nhóm 2-->
     <fieldset>
         <legend>Nhóm 2 - Thông tin bổ sung</legend>
         <label>Giới tính</label>
@@ -114,9 +114,9 @@
         <label>Hình thức học</label>
         <br>
         <label for="online">Online</label>
-        <input type="radio" id="online" name="study-type" value="online" tabindex="26">
+        <input type="radio" id="online" name="study_type" value="online" tabindex="26">
         <label for="offline">Offline</label>
-        <input type="radio" id="offline" name="study-type" value="offline" tabindex="27">
+        <input type="radio" id="offline" name="study_type" value="offline" tabindex="27">
         <br>
         <label for="introduce">Giới thiệu bản thân</label>
         <br>
@@ -131,62 +131,65 @@
         <br>
         <input type="file" name="cv" id="cv" accept=".pdf,.doc,.docx" tabindex="30">
     </fieldset>
-                                    <!--Nhóm 3-->
+    <!--Nhóm 3-->
     <fieldset>
         <legend>Input đặc biệt</legend>
         <label for="color">Màu yêu thích</label>
-        <input type="color" id="color" name="fav-color" tabindex="31" value="#ff6600">
+        <input type="color" id="color" name="fav_color" tabindex="31" value="#ff6600">
         <br>
         <label for="satisfaction">Mức độ hài lòng</label>
         <input type="range" name="satisfaction" id="satisfaction" min="0" max="10" value="5" tabindex="32">
         <br>
         <label for="study-time">Giờ học trong ngày</label>
-        <input type="time" id="study-time" name="study-time" value="10:00" tabindex="33">
+        <input type="time" id="study-time" name="study_time" value="10:00" tabindex="33">
         <br>
         <label for="start-month">Tháng bắt đầu học</label>
-        <input type="month" id="start-month" name="start-month" tabindex="34">
+        <input type="month" id="start-month" name="start_month" tabindex="34">
         <br>
         <label for="start-week">Tuần bắt đầu học</label>
-        <input type="week" id="start-week" name="start-week" tabindex="35">
+        <input type="week" id="start-week" name="start_week" tabindex="35">
         <br>
         <label for="register-at">Ngày & Giờ đăng kí</label>
-        <input type="datetime-local" id="register-at" name="register-at" tabindex="36">
+        <input type="datetime-local" id="register-at" name="register_at" tabindex="36">
         <br>
         <label for="sreach-course">Tìm kiếm khoá học</label>
-        <input type="search" id="sreach-course" name="sreach-course" placeholder="Nhập tên khoá học" tabindex="37">
+        <input type="search" id="sreach-course" name="sreach_course" placeholder="Nhập tên khoá học" tabindex="37">
         <br>
         <label for="experience">Số năm kinh nghiệm</label>
         <input type="number" id="experience" name="experience" min="0" max="50" step="1" tabindex="38">
         <br>
         <label for="budget">Mức học phí mong muốn</label>
-        <input type="range" id="budget" name="budget" min="5000000" step="100000" max="10000000" tabindex="39">
+        <input type="range" id="budget" name="budget" min="5000000" step="100000" max="10000000" value="1000000"
+               tabindex="39">
         <br>
         <label for="fav-language">Ngôn ngữ lập trình yêu thích</label>
-        <input type="text" id="fav-language" name="fav-lang" placeholder="DV: Javascript, Python..." tabindex="40">
+        <input type="text" id="fav-language" name="fav_lang" placeholder="DV: Javascript, Python..." tabindex="40">
     </fieldset>
-                                        <!--Nhóm 4-->
+    <!--Nhóm 4-->
     <fieldset>
         <legend>Xác nhận & Điều khoản</legend>
         <label for="code-year">Mã đăng kí F8</label>
-        <input type="text" id="code-year" name="code-year" value="F8-2026" readonly tabindex="41">
+        <input type="text" id="code-year" name="code_year" value="F8-2026" readonly tabindex="41">
         <br>
         <em>(mã đăng kí f8 được cấp theo đúng với năm đăng kí hoc)</em>
         <br>
         <label for="agree-terms">Tôi đồng ý với điều khoản</label>
-        <input type="checkbox" id="agree-terms" name="are-agree" tabindex="42" required>
+        <input type="checkbox" id="agree-terms" name="are_agree" tabindex="42" required>
         <br>
         <label for="subscribe">Nhận thông báo qua email</label>
         <input type="checkbox" id="subscribe" name="subscribe" tabindex="43">
         <br>
         <label for="sms-notify">Nhận thông báo qua SMS</label>
-        <input type="checkbox" id="sms-notify" name="sms-notify" tabindex="44">
+        <input type="checkbox" id="sms-notify" name="sms_notify" tabindex="44">
         <br>
         <label for="ref-code">Mã giới thiệu</label>
-        <input type="text" id="ref-code" name="ref-code" placeholder="Nhập mã nếu có " tabindex="45">
+        <input type="text" id="ref-code" name="ref_code" placeholder="Nhập mã nếu có " tabindex="45">
         <em>(có mã giới thiệu từ người khác sẽ được ưu đãi)</em>
         <br>
-        <input type="hidden" id="course-id" name=" course-id" value="F8_2024">
-        <input type="hidden" id="utm-source" name="utm-source" value="website">
+        <label for="course-id" hidden>Mã khoá học</label>
+        <input type="hidden" id="course-id" name="course_id" value="F8_2024">
+        <label for="utm-source" hidden>Nguồn truy cập</label>
+        <input type="hidden" id="utm-source" name="utm_source" value="website">
         <label for="discount">Mã giảm giá</label>
         <input type="text" id="discount" value="Không khả dụng" disabled>
         <em>(Hiện tại chưa có chương trình áp dụng mã giảm giá khi đăng kí khoá học)</em>
@@ -196,6 +199,28 @@
 
 
     </fieldset>
+    <!--
+    Câu 1: Sự khác nhau giữa method="get" và method="post" là gì?
+    - GET: gửi dữ liệu trên URL (query string), giới hạn độ dài, dễ bookmark, không phù hợp cho dữ liệu nhạy cảm.
+    - POST: gửi dữ liệu trong body request, không lộ trên URL, không bị giới hạn độ dài như GET, phù hợp cho form đăng ký/đăng nhập.
+
+    Câu 2: Tại sao cần có enctype="multipart/form-data" khi form có upload file?
+    - Vì khi upload file, trình duyệt phải gửi dữ liệu theo nhiều phần (text + file nhị phân).
+    - Nếu không dùng "multipart/form-data", file sẽ không được gửi đúng định dạng, server khó đọc được file.
+
+    Câu 3: Trường type="hidden" có tác dụng gì? Người dùng có thể xem được giá trị của nó không?
+    - Dùng để gửi dữ liệu ẩn mà user không cần nhập (mã khoá học, nguồn truy cập,...).
+    - Người dùng không thấy trong giao diện, nhưng có thể xem/chỉnh được nếu mở DevTools hoặc xem source.
+
+    Câu 4: Tại sao checkbox không được check thì không gửi lên server, còn radio thì luôn gửi một giá trị?
+    - Checkbox: chỉ những ô được check mới xuất hiện trong form data; ô không check coi như không tồn tại.
+    - Radio: trong cùng một nhóm name, khi đã chọn 1 ô thì khi submit luôn gửi đúng 1 giá trị được chọn.
+
+    Câu 5: Sự khác nhau giữa disabled và readonly là gì?
+    - disabled: input bị vô hiệu hoá, không focus được, thường hiển thị mờ, và KHÔNG gửi giá trị lên server.
+    - readonly: không cho sửa giá trị, nhưng vẫn focus được, và VẪN gửi giá trị hiện tại lên server.
+    -->
+
 </form>
 </body>
 </html>
