@@ -49,7 +49,13 @@
   Mau hien thi: black
 -->
     <h2 class="section">Tong quan he thong</h2>
-    <!--h2 co class.section dung internal css viet sau nen se co color="purple"-->
+    <!--
+  h2.section: khong co rule nao trong CSS dat chinh xac cho h2.section
+  Browser ap dung: .section (purple, specificity 0-1-0) thang h2 (violet, specificity 0-0-1)
+  Nen h2 hien mau: purple
+  Internal CSS chi set background va font cho h2.section, khong override color
+-->
+    -->
     <h3 class="title">Courses</h3>
     <p class="highlight">Quan li khoa hoc</p>
     <h3 class="title">Students</h3>

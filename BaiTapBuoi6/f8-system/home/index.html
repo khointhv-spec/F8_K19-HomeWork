@@ -10,7 +10,11 @@
     <link rel="stylesheet" href="../css/theme.css">
 </head>
 <body>
-<!--h1 va h2 có class="title" nhưng màu khác  bời vì h2 có thêm id là #main vì id có độ ưu tiên cao hơn nên sẽ có màu khác-->
+<!--
+  h1 co class="title"(orange) va id="main"(pink) — id co specificity cao hon class nen #main thang, h1 hien mau PINK
+  h2 chi co class="title" — bi theme.css override thanh mau TEAL
+  Do do h1 va h2 cung dung .title nhung hien mau khac nhau
+-->
 <h1 class="title" id="main">HOME PAGE</h1>
 <h2 class="title">Gioi thieu he thong</h2>
 <!--<h2 class="title"> — phần tử này bị override bởi theme.css-->
