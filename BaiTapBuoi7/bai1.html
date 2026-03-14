@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        /*CSS common*/
+        body {
+            background-color: #f9fafb;
+            color: #111827;
+        }
+
+        h1 {
+            color: #f9fafb;
+            background-color: #f98000;
+        }
+
+        .text {
+            background-color: #e5e7eb;
+            color: #111827;
+        }
+
+        .color {
+            background-color: #eef2ff;
+            color: #4b5563;
+        }
+
+        .text p {
+            background-color: #ffffff;
+            color: #9ca3af;
+        }
+
+        /*CSS theme*/
+        #light:checked + label {
+            color: #8b5e00;
+            background-color: #fff8cc;
+        }
+
+        #light:checked ~ .text .light-theme {
+            color: #111827;
+            background-color: #fff8cc;
+        }
+
+        #dark:checked + label {
+            color: #f9fafb;
+            background-color: #111827;
+        }
+
+        #dark:checked ~ .text .dark-theme {
+            color: #f9fafb;
+            background-color: #111827;
+        }
+
+        /* Color CSS */
+        #red:checked + label {
+            background-color: #fee2e2;
+            color: #991b1b;
+        }
+
+        #red:checked ~ .text .red {
+            background-color: #fee2e2;
+            color: #7f1d1d;
+        }
+
+        #blue:checked + label {
+            background-color: #dbeafe;
+            color: #1d4ed8;
+        }
+
+        #blue:checked ~ .text .blue {
+            background-color: #dbeafe;
+            color: #1d4ed8;
+        }
+
+        #green:checked + label {
+            background-color: #dcfce7;
+            color: #166534;
+        }
+
+        #green:checked ~ .text .green {
+            background-color: #dcfce7;
+            color: #166534;
+        }
+
+        /*Language CSS*/
+        #vi:checked + label {
+            background-color: #bbf7d0;
+            color: #166534;
+        }
+
+        #vi:checked ~ .text .vi {
+            color: #166534;
+        }
+
+        #en:checked + label {
+            background-color: #bfdbfe;
+            color: #1d4ed8;
+        }
+
+        #en:checked ~ .text .en {
+            color: #1d4ed8;
+        }
+
+        /*CSS Options-Checkbox*/
+        input[id="option1"]:checked + label {
+            background-color: #fef3c7;
+            color: #92400e;
+        }
+
+        input[id="option1"]:checked ~ .text .option1 {
+            color: #92400e;
+            background-color: #fef3c7;
+        }
+
+        input[id="option2"]:checked + label {
+            background-color: #bbf7d0;
+            color: #15803d;
+        }
+
+        input[id="option2"]:checked ~ .text .option2 {
+            color: #166534;
+            background-color: #bbf7d0;
+        }
+
+        input[id="option3"]:checked + label {
+            background-color: #fee2e2;
+            color: #b91c1c;
+        }
+
+        input[id="option3"]:checked ~ .text .option3 {
+            color: #b91c1c;
+            background-color: #fee2e2;
+        }
+
+    </style>
+    <title>Bai 1</title>
+</head>
+<body>
+<h1>Trung tâm cấu hình giao diện (Demo)</h1>
+
+<!--theme-->
+<p>Chọn giao diện (Theme):</p>
+<input type="radio" id="light" name="theme">
+<label for="light" class="color">Light:</label>
+<input type="radio" id="dark" name="theme">
+<label for="dark" class="color">Dark:</label>
+
+<!--Color-->
+<p>Chọn màu chủ đạo (Color):</p>
+<input type="radio" id="red" name="color">
+<label for="red" class="color">Red:</label>
+<input type="radio" id="blue" name="color">
+<label for="blue" class="color">Blue:</label>
+<input type="radio" id="green" name="color">
+<label for="green" class="color">Green:</label>
+
+<!--Language-->
+<p>Chọn ngôn ngữ (Language):</p>
+<input type="radio" id="vi" name="language">
+<label for="vi" class="color">Vi:</label>
+<input type="radio" id="en" name="language">
+<label for="en" class="color">EN:</label>
+
+<!--Options-Checkbox-->
+<p>Tuỳ chọn bổ sung (Options-Checkbox):</p>
+<input type="checkbox" id="option1" name="option1">
+<label for="option1" class="color">Hiển thị mô tả nâng cao</label>
+<input type="checkbox" id="option2" name="option2">
+<label for="option2" class="color">Bật chế độ Eco</label>
+<input type="checkbox" id="option3" name="option3">
+<label for="option3" class="color">Hiển thị cảnh báo quan trọng</label>
+
+<!--mo ta ket qua-->
+<div class="text">
+    <p class="light-theme">Theme Light: Giao diện sáng, chữ đen.</p>
+    <p class="dark-theme">Theme Dark: Giao diện tối, chữ sáng.</p>
+    <p class="red">Màu Red: được nhấn mạnh khi chọn Red.</p>
+    <p class="blue">Màu Blue: được nhấn mạnh khi chọn Blue.</p>
+    <p class="green">Màu Green: được nhấn mạnh khi chọn Green.</p>
+    <p class="vi">[VI] Xin chào bạn! Khi chọn VI, dòng này rõ hơn</p>
+    <p class="en">[EN] Hello, world! Khi chọn EN, dòng này rõ hơn</p>
+    <p class="option1">Mô tả nâng cao: giải thích kỹ hơn về cách lựa chọn đang ảnh hưởng đến giao diện.</p>
+    <p class="option2">Chế độ Eco: mô phỏng trạng thái tiết kiệm tài nguyên cho giao diện.</p>
+    <p class="option3">Cảnh báo quan trọng: khu vực dùng để nhần mạnh thông tin hệ thống.</p>
+</div>
+</body>
+</html>
