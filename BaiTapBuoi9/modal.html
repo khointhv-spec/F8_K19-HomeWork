@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>modal</title>
+    <style>
+        /* Trạng thái khi checkbox được check — hiện overlay */
+        #modal-toggle:checked ~ .overlay {
+            display: block;
+        }
+        /*CSS nút mở modal*/
+        .open-btn {
+            display: inline-block;
+            background-color: #3b82f6;
+            color: #ffffff;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin: 20px;
+        }
+        /*/* Lớp phủ nền tối — mặc định ẩn — nội dung nằm ở chính giữa */
+        .overlay {
+            display: none;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            text-align: center;
+            margin-top: 50px;
+        }
+        /*CSS nút đóng trong modal*/
+        .close-btn {
+            display: inline-block;
+            background-color: #ef4444;
+            color: #ffffff;
+            cursor: pointer;
+            padding : 10px 20px;
+            margin-right: 100px;
+        }
+        /*CSS modal-nền trắng*/
+        .modal {
+            display: inline-block;
+            background-color: #ffffff;
+            padding: 50px;
+            border-radius: 5px;
+            margin-top: 100px;
+
+        }
+    </style>
+</head>
+<body>
+<!--Tạo 1 input và 3 label liên kết với nhau.-->
+<input type="checkbox" id="modal-toggle" hidden>
+<label for="modal-toggle" class="open-btn">Mở modal</label>
+<label for="modal-toggle" class="overlay">
+    <span class="modal">
+      <p class="text">Đây là nội dung thông báo!</p>
+    <label for="modal-toggle" class="close-btn">Đóng</label>
+    </span>
+</label>
+
+</body>
+</html>
