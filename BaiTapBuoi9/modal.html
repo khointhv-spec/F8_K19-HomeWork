@@ -20,14 +20,13 @@
             cursor: pointer;
             margin: 20px;
         }
-        /*/* Lớp phủ nền tối — mặc định ẩn — nội dung nằm ở chính giữa */
+        /* Lớp phủ nền tối — mặc định ẩn — nội dung nằm ở chính giữa */
         .overlay {
             display: none;
             width: 100vw;
             height: 100vh;
             background-color: rgba(0, 0, 0, 0.5);
             text-align: center;
-            margin-top: 50px;
         }
         /*CSS nút đóng trong modal*/
         .close-btn {
@@ -36,7 +35,6 @@
             color: #ffffff;
             cursor: pointer;
             padding : 10px 20px;
-            margin-right: 100px;
         }
         /*CSS modal-nền trắng*/
         .modal {
@@ -54,10 +52,10 @@
 <input type="checkbox" id="modal-toggle" hidden>
 <label for="modal-toggle" class="open-btn">Mở modal</label>
 <label for="modal-toggle" class="overlay">
-    <span class="modal">
+    <div class="modal">
       <p class="text">Đây là nội dung thông báo!</p>
     <label for="modal-toggle" class="close-btn">Đóng</label>
-    </span>
+    </div>
 </label>
 
 </body>
