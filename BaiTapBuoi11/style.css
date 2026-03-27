@@ -1,0 +1,154 @@
+/*Reset CSS*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Setting box*/
+.box {
+    width: 60px;
+    height: 60px;
+    background-color: #ffe300;
+    color: red;
+}
+
+/*Bài 1/10*/
+.container1 {
+    width: 600px;
+    height: 200px;
+    border: 1px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Bài 2/10*/
+.container2 {
+    width: 600px;
+    height: 200px;
+    border: 1px solid;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Bài 3/10*/
+.container3 {
+    width: 600px;
+    height: 200px;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box1 {
+    margin-bottom: 20px;
+}
+
+.box2 {
+    margin-bottom: 50px;
+}
+
+/*Bài 4/10*/
+.container4 {
+    width: 600px;
+    height: 200px;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box4 {
+    margin-right: 10px;
+}
+
+.box6 {
+    margin-left: 40px;
+}
+
+/*Bài 5/10*/
+.container5 {
+    width: 600px;
+    height: 200px;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Bài 6/10*/
+.container6 {
+    width: 600px;
+    height: 200px;
+    border: 1px solid;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Bài 7/10*/
+.container7 {
+    width: 600px;
+    height: 200px;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box7 {
+    margin-bottom: 60px;
+}
+
+.box8 {
+    margin-bottom: 20px;
+}
+
+/*Bài 8/10*/
+.container8 {
+    width: 600px;
+    height: 200px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+}
+
+.box10 {
+    margin: auto;
+}
+
+/*Bài 9/10*/
+.container9 {
+    width: 600px;
+    height: 200px;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.box12 {
+    margin-top: -60px;
+}
+
+.box14 {
+    margin-top: 60px;
+}
+
+/*Bài 10/10*/
+.container10 {
+    width: 600px;
+    height: 200px;
+    border: 1px solid;
+    display: flex;
+}
+.box16 {
+    margin: auto;
+}
+.box17 {
+    margin-top: auto
+}
