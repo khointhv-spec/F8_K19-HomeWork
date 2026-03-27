@@ -1,0 +1,138 @@
+/* Reset Css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333333;
+    font-size: 1rem;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
+/*CSS header*/
+.header {
+    background-color: #ffffff;
+    border-bottom: 0.0625rem solid #dddddd;
+}
+
+.header-inner {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0.5rem 0;
+}
+
+/*CSS logo*/
+.logo {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1.5625rem;
+}
+
+.logo img {
+    width: 2.375rem;
+    height: 2.375rem;
+    vertical-align: middle;
+}
+
+/*CSS Navigation*/
+.nav {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.menu-item {
+    display: inline-block;
+    position: relative;
+    margin-right: 1.5625rem;
+}
+
+.menu-item > a {
+    display: inline-block;
+    padding: 0.375rem 0 0.75rem 0;
+    border-bottom: 0.125rem solid transparent;
+    font-weight: bold;
+}
+
+.menu-item:hover > a {
+    color: #d62828;
+    border-bottom: 0.125rem solid #d62828;
+}
+
+/*CSS Icon*/
+.icon-down {
+    color: #555555;
+    font-size: 0.625rem
+}
+
+.icon-right {
+    color: #777777;
+    font-size: 0.625rem;
+}
+
+/*Dropdown cấp 1*/
+.sub-menu {
+    display: none;
+    min-width: 12.5rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    border: 0.063rem solid #dddddd;
+    /*padding-top: 0.625rem;*/
+}
+
+.menu-item:hover > .sub-menu {
+    display: block;
+}
+
+.submenu-item > a {
+    display: block;
+    padding: 0.375rem 0.625rem;
+}
+
+.submenu-item:hover > a {
+    background-color: #f5f5f5;
+    color: #d62828;
+}
+
+.submenu-item {
+    position: relative;
+}
+
+/*Dropdown cấp 2*/
+.sub-menu2 {
+    display: none;
+    min-width: 12.5rem;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #ffffff;
+    border: 0.063rem solid #dddddd;
+    /*vì thẻ cha dùng position: relative nên dùng absolute ăn thẻ cha của nó*/
+}
+
+.has-sub2:hover > .sub-menu2 {
+    display: block;
+    /*khi hover vào sẽ hiện ra sub-menu2*/
+}
+
+.submenu-item2 > a {
+    display: block;
+    padding: 0.375rem 0.625rem;
+}
+
+.submenu-item2:hover > a {
+    background-color: #f5f5f5;
+    color: #d62828;
+}
