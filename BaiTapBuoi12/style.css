@@ -5,25 +5,29 @@
     box-sizing: border-box;
 }
 
-/*Root CSS*/
+/* Thiết lập Font chữ và màu nền cho trang */
 body {
     background-color: #ebf5fe;
     color: #666666;
     font-family: "Roboto", sans-serif;
 }
 
+/* Container chứa toàn bộ nội dung, căn giữa màn hình */
 .container {
     max-width: 1200px;
     margin: 30px auto;
     padding: 0 10px;
 
 }
+
+/* Thiết lập hàng sử dụng Flexbox để các thẻ nằm ngang */
 .row {
     display: flex;
     gap: 20px;
     margin-bottom: 20px;
 }
 
+/* Định dạng chung cho mỗi thẻ dịch vụ (Card) */
 .card {
     flex: 1;
     padding: 30px;
@@ -33,7 +37,7 @@ body {
     background-color: #ffffff;
 }
 
-/*CSS Icon*/
+/* Định dạng Icon hình tròn phía trên mỗi thẻ */
 .card--icon {
     display: flex;
     justify-content: center;
@@ -45,6 +49,7 @@ body {
     color: #ffffff;
 }
 
+/* Màu nền riêng biệt cho từng loại Icon */
 .card--red > .card--icon {
     background-color: #ff6b6b;
 }
@@ -70,7 +75,7 @@ body {
 }
 
 
-/*CSS Card--Title*/
+/* Định dạng tiêu đề của thẻ */
 .card--title {
     font-size: 20px;
     font-weight: 600;
@@ -79,7 +84,8 @@ body {
     margin-top: 20px;
     margin-bottom: 15px;
 }
-/*CSS Card--Content*/
+
+/* Định dạng nội dung mô tả ngắn */
 .card--content {
     font-size: 15px;
     font-weight: 400;
@@ -87,7 +93,8 @@ body {
     line-height: 1.6;
     margin-bottom: 20px;
 }
-/*CSS Card--Link*/
+
+/* Định dạng liên kết "Learn More" */
 .card--link > a {
     font-size: 15px;
     font-weight: 500;
@@ -95,7 +102,8 @@ body {
     color: #2196f3;
 
 }
-/*CCS Card:hover */
+
+/* Hiệu ứng đổi màu viền khi di chuột qua thẻ (Hover) */
 .card--red:hover {
     border: 3px solid #ff6b6b;
 }
@@ -114,7 +122,8 @@ body {
 .card--green:hover {
     border: 3px solid #7cb342;
 }
-/*CSS link:hover*/
+
+/* Hiệu ứng gạch chân liên kết khi di chuột qua */
 .card--link > a:hover {
     text-decoration: underline;
 }
