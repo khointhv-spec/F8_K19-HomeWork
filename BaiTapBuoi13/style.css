@@ -1,0 +1,84 @@
+/*Reset CSS*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Căn giữa toàn bộ nội dung trong màn hình */
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Thiết lập cơ bản cho mỗi dải strip */
+.strip {
+    position: relative;
+    width:20%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+/* Kiểu dáng chữ tiêu đề */
+.strip h2 {
+    position: relative;
+    font-family: Helvetica, sans-serif ;
+    font-weight: 900;
+    font-size: 2rem;
+    color: #fff;
+    opacity: 1;
+}
+/* Hình ảnh nền ẩn mặc định */
+.strip img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+}
+/* Lớp phủ làm tối ảnh khi hover */
+.strip .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+}
+/* Màu nền riêng cho từng dải */
+.strip--1 {
+    background-color: forestgreen;
+}
+.strip--2 {
+    background-color: khaki;
+}
+.strip--3 {
+    background-color: dodgerblue;
+}
+.strip--4 {
+    background-color: orange;
+}
+.strip--5 {
+    background-color: violet;
+}
+/* Hiệu ứng khi di chuột vào strip: mở rộng chiều rộng và hiển thị ảnh */
+.strip:hover {
+    width: 100%;
+    min-height: 100vh;
+}
+.strip:hover h2 {
+    opacity: 0;
+}
+.strip:hover .overlay {
+    opacity: 1;
+}
+.strip:hover img {
+    opacity: 1;
+}
