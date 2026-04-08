@@ -1,0 +1,260 @@
+/* 1. Reset CSS: Xóa bỏ margin/padding mặc định của trình duyệt */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ẩn input checkbox dùng cho menu toggle */
+input {
+    display: none;
+}
+
+/* 2. CSS Overlay: Lớp phủ đen mờ khi mở menu trên mobile */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 998;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease , visibility 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hiển thị overlay khi checkbox được check */
+#menu-toggle:checked ~ .overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 3. CSS Header & Navigation: Thanh tiêu đề và menu điều hướng */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Logo trang web */
+.header__logo {
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    z-index: 1001;
+}
+
+/* Nút Hamburger (ẩn trên desktop) */
+.header__hamburger {
+    position: relative;
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+/* Nút đóng menu mobile */
+.nav__close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.nav__close-btn:hover {
+    transform: rotate(90deg);
+    transition: 0.3s ease;
+    color: #ffacac;
+}
+
+/* Menu điều hướng chính */
+.header__nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav__list {
+    list-style: none;
+}
+
+.nav__item {
+    display: inline-block;
+    margin-right: 2rem;
+}
+
+.nav__link {
+    color: #cac7c7;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.nav__link:hover {
+    color: #ffffff;
+}
+
+/* 4. Mobile Navigation: Menu trượt từ cạnh phải vào */
+.nav--mobile {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background-color: #3a3a3a;
+    padding: 2rem;
+    z-index: 1000;
+    transition: right 0.3s ease;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav--mobile .nav__list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.nav--mobile .nav__item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 0;
+}
+
+.nav--mobile .nav__link:hover {
+    color: #ffffff;
+}
+
+/* Hiển thị menu mobile khi checkbox được check */
+#menu-toggle:checked ~ .nav--mobile {
+    right: 0;
+    transition: right 0.3s ease;
+}
+
+/* 5. Main Container Layout: Bố cục nội dung chính và Sidebar */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+.main__heading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.main__paragraph {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.container__content {
+    flex: 1;
+}
+
+/* Sidebar bên phải */
+.container__sidebar {
+    width: 300px;
+    min-height: 400px;
+    background-color: #3a3a3a;
+    color: #fff;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* 6. Cards Style: Định dạng các thẻ Card */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card {
+    width: calc((100% - 2rem) / 3);
+    border: 2px solid #2e2d2d;
+}
+
+.card__header {
+    background-color: #3a3a3a;
+    padding: 1rem;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.card__body {
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* 7. Responsive Tablet: Giao diện cho máy tính bảng */
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem;
+    }
+    .header__nav .nav__list {
+        display: none; /* Ẩn menu desktop */
+    }
+
+    .header__hamburger {
+        display: block; /* Hiện nút menu mobile */
+    }
+
+    .nav__close-btn {
+        display: block;
+    }
+    .container {
+        padding: 1rem;
+    }
+    .container__sidebar {
+        width: 250px;
+    }
+
+    /* Chia card thành 2 cột trên tablet */
+    .card {
+        width: calc((100% - 1rem) / 2);
+    }
+}
+
+/* 8. Responsive Mobile: Giao diện cho điện thoại */
+@media (max-width: 480px) {
+    .container {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column; /* Chuyển sidebar xuống dưới */
+        padding: 1rem;
+    }
+    .container__content {
+        width: 100%;
+    }
+    .container__sidebar {
+        width: 100%;
+        min-height: auto;
+    }
+    .main__heading {
+        font-size: 1.5rem;
+    }
+    /* Chia card thành 1 cột trên mobile */
+    .card {
+        width: 100%;
+    }
+
+    .nav--mobile{
+        right: -280px;
+        width: 280px;
+        padding: 2rem 1.5rem;
+    }
+}
